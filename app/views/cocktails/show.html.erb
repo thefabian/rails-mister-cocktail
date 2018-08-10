@@ -11,6 +11,8 @@
         </tbody>
       </table>
 
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -23,7 +25,7 @@
          <tr>
           <td><%= dose.description %></td>
           <td><%= dose.ingredient.name %><%= link_to "- <i class='far fa-trash-alt'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Delete dose?" } %></td>
-         </tr>
+        </tr>
         <% end %>
       </tbody>
     </table>

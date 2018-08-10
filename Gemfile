@@ -5,6 +5,10 @@ ruby '2.4.4'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem 'cloudinary'
+
+gem 'carrierwave', '~> 1.2'
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 5.0.9'

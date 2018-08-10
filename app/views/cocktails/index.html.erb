@@ -1,16 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= cl_image_path("jlkvjemhpzjlp5jeunmn") %>);">
+  <div class="banner-content">
+    <h1>The Cocktail Factory</h1>
+    <p>Learn how to make perfect cocktails and share your recipes</p>
+  </div>
+</div>
+
 <div class="container">
+  <h1>All Cocktails</h1>
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All Cocktails</h1>
-      <ul class="list-group">
-        <% @cocktails.each do |cocktail| %>
-          <li class="list-group-item">
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
-          </li>
-        <% end %>
-      </ul>
-      <%= link_to "+ Add a new Cocktail", new_cocktail_path, class: 'btn btn-primary' %>
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <div class="card-category">Popular</div>
+        <div class="card-description">
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        </div>
+        <%= link_to '', cocktail_path(cocktail), class: 'card-link' %>
+      </div>
     </div>
+    <% end  %>
   </div>
 </div>
 
